@@ -5,7 +5,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import puppeteer from "puppeteer";
-import type { Event, ICourseRepository } from "@infoeste/core";
+import type { InfoesteEvent, ICourseRepository } from "@infoeste/core";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const WEB_APP_DIR = path.resolve(__dirname, "../../../web");
@@ -14,12 +14,12 @@ const EVENTS_FILE_PATH = path.join(WEB_PUBLIC_DIR, "events.json");
 const PREVIEW_PORT = 4173;
 
 export class ConsoleUI {
-  constructor(private readonly courseRepository: ICourseRepository) {}
+  constructor(private readonly courseRepository: ICourseRepository) { }
 
   async render(): Promise<void> {
     try {
       console.log("Buscando eventos...");
-      const events = await this.courseRepository.getEvents();
+      const events = await this.courseRepository.getGroupedEvents();
       console.log(`Eventos carregados: ${events.length}`);
 
       await this.persistEvents(events);
@@ -37,7 +37,7 @@ export class ConsoleUI {
     }
   }
 
-  private async persistEvents(events: Event[]): Promise<void> {
+  private async persistEvents(events: InfoesteEvent[]): Promise<void> {
     await fs.mkdir(WEB_PUBLIC_DIR, { recursive: true });
     const json = JSON.stringify(events, null, 2);
     await fs.writeFile(EVENTS_FILE_PATH, json, "utf-8");

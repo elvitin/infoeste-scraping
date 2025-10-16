@@ -1,11 +1,11 @@
 import type { Browser, Frame, Page } from "puppeteer";
 import puppeteer from "puppeteer";
-import type { Course, Event, ICourseRepository } from "@infoeste/core";
+import type { Event, InfoesteEvent, ICourseRepository } from "@infoeste/core";
 
 export class PuppeteerCourseRepository implements ICourseRepository {
   private readonly URL = "https://www.unoeste.br/semanas/2025/37infoeste/CursosPalestras";
 
-  async getEvents(): Promise<Event[]> {
+  async getGroupedEvents(): Promise<InfoesteEvent[]> {
     const browser = await this.launchBrowser();
     const page = await this.newPage(browser);
 
@@ -51,13 +51,11 @@ export class PuppeteerCourseRepository implements ICourseRepository {
     await frame.waitForNavigation({ waitUntil: "networkidle2" });
   }
 
-  private async extractEvents(frame: Frame): Promise<Event[]> {
-    type ExtractedCourse = Pick<Course, "id" | "name" | "time" | "vacancies" | "vacanciesLeft">;
-    type ExtractedEvent = Event & { courses: ExtractedCourse[] };
+  private async extractEvents(frame: Frame): Promise<InfoesteEvent[]> {
 
     await frame.waitForSelector("#listaHorarios");
     const events = (await frame.evaluate(() => {
-      const parsedEvents: ExtractedEvent[] = [];
+      const parsedEvents: InfoesteEvent[] = [];
       const eventElements = document.querySelectorAll("#listaHorarios > li");
 
       eventElements.forEach((eventElement) => {
@@ -65,33 +63,50 @@ export class PuppeteerCourseRepository implements ICourseRepository {
         const title = titleElement ? (titleElement.textContent?.trim() ?? "") : "";
 
         const courseRows = eventElement.querySelectorAll("table tbody tr:not(:first-child)");
-        let currentDate = "";
 
+
+        let currentDate = "";
+        const dateRegex = /(\d{2}\/\d{2}\/\d{4})/;
         const dateHeader = eventElement.querySelector("table tbody tr:first-child th:first-child");
         if (dateHeader) {
-          const dateMatch = dateHeader.textContent?.match(/(\d{2}\/\d{2}\/\d{4})/);
-          if (dateMatch) {
-            currentDate = dateMatch[0];
+          const dateMatch = dateHeader.textContent?.match(dateRegex);
+          if (!dateMatch) {
+            throw new Error("Data não encontrada");
           }
+          currentDate = dateMatch[0];
         }
 
-        const courses: ExtractedCourse[] = [];
+
+        const courses: Event[] = [];
         courseRows.forEach((row) => {
           const columns = row.querySelectorAll("td");
           if (columns.length >= 4) {
             const courseNameElement = columns[0].querySelector("a");
-            const courseName = courseNameElement ? (courseNameElement.textContent?.trim() ?? "") : "";
-            const idMatch = courseName.match(/\( (\d+) \)/);
+            let courseName = courseNameElement ? (courseNameElement.textContent?.trim() ?? "") : "";
+            courseName = courseName.replace(/\s+/g, " ").trim();
+
+            const idMatch = courseName.match(/\(\s*(\d+)\s*\)/);
             const id = idMatch ? Number.parseInt(idMatch[1], 10) : 0;
 
             const time = columns[1].textContent?.trim() ?? "";
+            const startTime = time.split("às")[0].trim() ?? "";
+            const endTime = time.split("às")[1].trim() ?? "";
+
+            //create date with dateHeader and startTime
+            const [day, month, year] = currentDate.split("/").map((part) => Number.parseInt(part, 10));
+            const [startHour, startMinute, sec] = startTime.split(":").map((part) => Number.parseInt(part, 10));
+            const courseDate = new Date(year, month - 1, day, startHour, startMinute, sec);
+
             const vacancies = Number.parseInt(columns[2].textContent?.trim() ?? "0", 10);
             const vacanciesLeft = Number.parseInt(columns[3].textContent?.trim() ?? "0", 10);
 
             courses.push({
               id,
-              name: courseName.replace(`( ${id} ) - `, ""),
-              time,
+              name: courseName.replace(/\(\s*(\d+)\s*\)\s*-\s*/, "").trim(),
+              date: courseDate.toISOString(),
+              periodTime: time,
+              startTime,
+              endTime,
               vacancies,
               vacanciesLeft,
             });
@@ -101,25 +116,14 @@ export class PuppeteerCourseRepository implements ICourseRepository {
         if (title && courses.length > 0) {
           parsedEvents.push({
             title,
-            date: currentDate,
             courses,
           });
         }
       });
 
       return parsedEvents;
-    })) as ExtractedEvent[];
+    })) as InfoesteEvent[];
 
-    return events.map((event: ExtractedEvent) => ({
-      title: event.title,
-      date: event.date,
-      courses: event.courses.map((course: ExtractedCourse) => ({
-        id: course.id,
-        name: course.name,
-        time: course.time,
-        vacancies: course.vacancies,
-        vacanciesLeft: course.vacanciesLeft,
-      })),
-    }));
+    return events;
   }
 }

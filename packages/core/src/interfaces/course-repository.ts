@@ -1,5 +1,5 @@
-import type { Event } from "../entities/event";
+import type { InfoesteEvent } from "../entities/infoeste-event";
 
 export interface ICourseRepository {
-  getEvents(): Promise<Event[]>;
+  getGroupedEvents(): Promise<InfoesteEvent[]>;
 }
