@@ -1,0 +1,20 @@
+{
+  "name": "@infoeste/scraper",
+  "version": "1.0.0",
+  "license": "ISC",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "@infoeste/core": "1.0.0",
+    "@infoeste/infrastructure": "1.0.0",
+    "puppeteer": "^24.25.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.6"
+  }
+}

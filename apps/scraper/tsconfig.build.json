@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@infoeste/core": ["../../packages/core/dist/index"],
+      "@infoeste/core/*": ["../../packages/core/dist/*"],
+      "@infoeste/infrastructure": ["../../packages/infrastructure/dist/index"],
+      "@infoeste/infrastructure/*": ["../../packages/infrastructure/dist/*"]
+    }
+  }
+}
