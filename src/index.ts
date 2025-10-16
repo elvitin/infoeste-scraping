@@ -2,9 +2,9 @@ import { PuppeteerCourseRepository } from "./infrastructure/puppeteer-course-rep
 import { ConsoleUI } from "./ui/console";
 
 async function main() {
-	const courseRepository = new PuppeteerCourseRepository();
-	const ui = new ConsoleUI(courseRepository);
-	await ui.render();
+  const courseRepository = new PuppeteerCourseRepository();
+  const ui = new ConsoleUI(courseRepository);
+  await ui.render();
 }
 
 main();
