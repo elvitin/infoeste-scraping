@@ -21,7 +21,11 @@
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "double"
+      "quoteStyle": "single",
+      "arrowParentheses": "asNeeded",
+      "lineWidth": 120,
+      "indentWidth": 2,
+      "trailingCommas": "none"
     }
   },
   "assist": {

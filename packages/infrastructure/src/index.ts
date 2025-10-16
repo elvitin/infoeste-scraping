@@ -1,1 +1,1 @@
-export * from "./repositories/puppeteer-course-repository";
+export * from './repositories/puppeteer-course-repository';

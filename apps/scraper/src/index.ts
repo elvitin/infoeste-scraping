@@ -1,5 +1,5 @@
-import { PuppeteerCourseRepository } from "@infoeste/infrastructure";
-import { ConsoleUI } from "./ui/console";
+import { PuppeteerCourseRepository } from '@infoeste/infrastructure';
+import { ConsoleUI } from './ui/console';
 
 async function main(): Promise<void> {
   const courseRepository = new PuppeteerCourseRepository();
@@ -7,7 +7,7 @@ async function main(): Promise<void> {
   await ui.render();
 }
 
-main().catch((error) => {
-  console.error("Falha ao executar o coletor:", error);
+main().catch(error => {
+  console.error('Falha ao executar o coletor:', error);
   process.exitCode = 1;
 });

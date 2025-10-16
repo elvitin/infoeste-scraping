@@ -11,10 +11,14 @@
     "dev": "npm run dev --workspace @infoeste/scraper",
     "build": "npm run build --workspace @infoeste/core && npm run build --workspace @infoeste/infrastructure && npm run build --workspace @infoeste/web && npm run build --workspace @infoeste/scraper",
     "lint": "biome check .",
-    "clean": "node ./scripts/clean.mjs"
+    "fmt:fix": "npx @biomejs/biome format --write .",
+    "clean": "node ./scripts/clean.mjs",
+    "knip": "knip"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.6",
-    "@types/node": "^24.7.2"
+    "@types/node": "^24.8.0",
+    "knip": "^5.65.0",
+    "typescript": "^5.9.3"
   }
 }
