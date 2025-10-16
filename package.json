@@ -1,24 +1,20 @@
 {
   "name": "infoeste-scraping",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "start": "npx tsx src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "cheerio": "^1.1.2",
-    "lodash": "^4.17.21",
-    "puppeteer": "^24.25.0"
+    "start": "npm run dev --workspace @infoeste/scraper",
+    "dev": "npm run dev --workspace @infoeste/scraper",
+    "build": "npm run build --workspace @infoeste/core && npm run build --workspace @infoeste/infrastructure && npm run build --workspace @infoeste/web && npm run build --workspace @infoeste/scraper",
+    "lint": "biome check .",
+    "clean": "node ./scripts/clean.mjs"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.6",
-    "@types/node": "^24.7.2",
-    "tsx": "^4.20.6"
+    "@types/node": "^24.7.2"
   }
 }

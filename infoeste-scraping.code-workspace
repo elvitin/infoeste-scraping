@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "apps/web"
+    },
+    {
+      "path": "packages/core"
+    },
+    {
+      "path": "apps/scraper"
+    },
+    {
+      "path": "packages/infrastructure"
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib"
+  }
+}
