@@ -1,5 +1,7 @@
 # Infoeste Scraping
 
+![](./docs/home_page.png)
+
 Projeto em monorepo (npm workspaces) que disponibiliza uma API REST para scraping de eventos da INFOESTE com Puppeteer e uma interface web moderna para visualização dos dados.
 
 ## 🚀 Arquitetura
