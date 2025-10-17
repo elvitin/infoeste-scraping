@@ -4,7 +4,7 @@ import type { PuppeteerManager } from '../puppeteer/puppeteer-manager';
 
 export class PuppeteerCourseRepository implements ICourseRepository {
   private readonly URL = 'https://www.unoeste.br/semanas/2025/37infoeste/CursosPalestras';
-  constructor(private puppeteerManager: PuppeteerManager) { }
+  constructor(private puppeteerManager: PuppeteerManager) {}
 
   async getGroupedEvents(): Promise<InfoesteEvent[]> {
     const page = await this.puppeteerManager.navigateTo(this.URL);

@@ -11,7 +11,6 @@ interface ApiResponse {
   message?: string;
 }
 
-
 const API_BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:3000';
 
 function App() {
@@ -47,8 +46,7 @@ function App() {
   React.useEffect(() => {
     const controller = new AbortController();
     setIsLoading(true);
-    fetchEvents(controller.signal)
-      .finally(() => setIsLoading(false));
+    fetchEvents(controller.signal).finally(() => setIsLoading(false));
     return () => controller.abort();
   }, [fetchEvents]);
 
@@ -77,7 +75,6 @@ function App() {
   }
 
   return (
-
     <React.Fragment>
       <div className="hidden h-full flex-1 flex-col gap-8 p-8 md:flex">
         <div className="flex items-center justify-between gap-2">
@@ -88,13 +85,12 @@ function App() {
         </div>
         <EventsTable events={events} onRefresh={handleRefresh} isRefreshing={isRefreshing} />
       </div>
-      <Toaster position='top-center' richColors={true} closeButton={true} />
+      <Toaster position="top-center" richColors={true} closeButton={true} />
     </React.Fragment>
   );
 }
 
 export { App };
-
 
 /*
 interface HealthResponse {
