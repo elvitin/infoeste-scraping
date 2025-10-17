@@ -1,0 +1,957 @@
+[
+  {
+    "title": "15º Festival Cultural",
+    "courses": [
+      {
+        "id": 9390,
+        "name": "15º Festival Cultural - FIPP/Unoeste - Local: Teatro Cesar Cava - Campus 1 (Alunos dos cursos EAD podem comparecer presencialmente)",
+        "date": "31/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 550,
+        "vacanciesLeft": 216
+      }
+    ]
+  },
+  {
+    "title": "19ª Festa Linux",
+    "courses": [
+      {
+        "id": 9375,
+        "name": "19ª Festa Linux para Principiantes: Parte 1 - Local: LAB 103 (Presencial)",
+        "date": "30/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9376,
+        "name": "19ª Festa Linux para Principiantes: Parte 1 - Local: LAB 105 (Presencial)",
+        "date": "30/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 50,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9375,
+        "name": "19ª Festa Linux para Principiantes: Parte 2 - Local: LAB 103 (Presencial)",
+        "date": "30/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9376,
+        "name": "19ª Festa Linux para Principiantes: Parte 2 - Local: LAB 105 (Presencial)",
+        "date": "30/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 50,
+        "vacanciesLeft": 0
+      }
+    ]
+  },
+  {
+    "title": "19ª Maratona de Programação",
+    "courses": [
+      {
+        "id": 9377,
+        "name": "19ª Maratona de Programação da Faculdade de Informática de Presidente Prudente - Local: Laboratórios da FIPP (Presencial)",
+        "date": "29/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 110,
+        "vacanciesLeft": 47
+      }
+    ]
+  },
+  {
+    "title": "2° WTM Meetup Prudente",
+    "courses": [
+      {
+        "id": 9554,
+        "name": "Palestra 04 - IA no Ciclo de Desenvolvimento de Software. - Local: Sala H21 (Presencial)",
+        "date": "30/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 100,
+        "vacanciesLeft": 0
+      }
+    ]
+  },
+  {
+    "title": "37º Ciclo de Cursos",
+    "courses": [
+      {
+        "id": 9346,
+        "name": "Curso 08 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 1 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9394,
+        "name": "Curso 36 - SVN e TortoiseSVN - Um versionamento alternativo: Parte 1 - Local: Laboratório de Criação 2 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 28
+      },
+      {
+        "id": 9527,
+        "name": "Curso 44 - Introdução a Maratona de Programação: Parte 1 - Local: Lab 108 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9531,
+        "name": "Curso 45 - Detector de mensagens de golpes com BERT: Parte 1 - Local: LAB 106 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 18
+      },
+      {
+        "id": 9347,
+        "name": "Curso 09 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 1 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 17
+      },
+      {
+        "id": 9369,
+        "name": "Curso 31 - AWS Serverless na Prática: Parte 1 - Local: LAB 108 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 25,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9394,
+        "name": "Curso 36 - SVN e TortoiseSVN - Um versionamento alternativo: Parte 2 - Local: Laboratório de Criação 2 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 28
+      },
+      {
+        "id": 9346,
+        "name": "Curso 08 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 2 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9353,
+        "name": "Curso 15 - Fundamentos do desenho tradicional e digital: Parte 1 - Local: Laboratório de Criação 2 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 25,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9405,
+        "name": "Curso 37 - Qualidade de Software na Prática: Do Planejamento à Automação: Parte 1 - Local: LAB Redes (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 35,
+        "vacanciesLeft": 17
+      },
+      {
+        "id": 9423,
+        "name": "Curso 39 - Redis e Git: Fundamentos Essenciais para Aplicações Modernas: Parte 1 - Local: LAB 107 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 45,
+        "vacanciesLeft": 28
+      },
+      {
+        "id": 9527,
+        "name": "Curso 44 - Introdução a Maratona de Programação: Parte 2 - Local: Lab 108 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9531,
+        "name": "Curso 45 - Detector de mensagens de golpes com BERT: Parte 2 - Local: LAB 106 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 18
+      },
+      {
+        "id": 9347,
+        "name": "Curso 09 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 2 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 17
+      },
+      {
+        "id": 9354,
+        "name": "Curso 16 - Cibersegurança e Hacking Ético: Parte 1 - Local: LAB 106 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9369,
+        "name": "Curso 31 - AWS Serverless na Prática: Parte 2 - Local: LAB 108 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 25,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9373,
+        "name": "Curso 35 - Git e GitHub: Do Básico ao Pull Request: Parte 1 - Local: Laboratório de Criação 2 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9405,
+        "name": "Curso 37 - Qualidade de Software na Prática: Do Planejamento à Automação: Parte 2 - Local: LAB Redes (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 35,
+        "vacanciesLeft": 17
+      },
+      {
+        "id": 9423,
+        "name": "Curso 39 - Redis e Git: Fundamentos Essenciais para Aplicações Modernas: Parte 2 - Local: LAB 107 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 45,
+        "vacanciesLeft": 28
+      },
+      {
+        "id": 9552,
+        "name": "Curso 46 - Desenvolvendo API de busca com Elasticsearch e Serviço de Mensageria: Parte 1 - Local: Lab 101 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 11
+      },
+      {
+        "id": 9339,
+        "name": "Curso 01 - Acessibilidade Digital (a11y): Parte 1 - Local: Laboratório de Criação 2 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 23
+      },
+      {
+        "id": 9340,
+        "name": "Curso 02 - Segurança de Aplicações Web e APIs - Fundamentos, Ferramentas e Simulação de Ataque: Parte 1 - Local: LAB 004 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 40,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9342,
+        "name": "Curso 04 - Java e Estruturas de Dados para entrevistas em Big Techs: Parte 1 - Local: LAB 103 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9343,
+        "name": "Curso 05 - Here we GO again - Introdução a scripts com golang: Parte 1 - Local: LAB 002 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 25,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9344,
+        "name": "Curso 06 - DevOps e Docker: Parte 1 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9345,
+        "name": "Curso 07 - Primeiros passos com o aprendizado de máquina: Conceitos e Técnicas Clássicas: Parte 1 - Local: Laboratório de Criação 1 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 25,
+        "vacanciesLeft": 1
+      },
+      {
+        "id": 9348,
+        "name": "Curso 10 - Cibersegurança e Hacking Ético: Parte 1 - Local: LAB 106 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9349,
+        "name": "Curso 11 - Desenvolvimento de Agente de IA para Negócios: Parte 1 - Local: LAB 001 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 20,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9350,
+        "name": "Curso 12 - Construindo Bots com IA no WhatsApp: Node.js + ChatGPT: Parte 1 - Local: LAB 104 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 25,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9352,
+        "name": "Curso 14 - DotNET com Entity Framework Core: Construindo Aplicações Multi-Tenant do Zero: Parte 1 - Local: LAB 006 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 35,
+        "vacanciesLeft": 30
+      },
+      {
+        "id": 9371,
+        "name": "Curso 33 - Construindo e entregando APIs escaláveis em ASP.NET Core com arquitetura moderna e pipelines de CI/CD na Cloud Azure: Parte 1 - Local: LAB 107 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 50,
+        "vacanciesLeft": 36
+      },
+      {
+        "id": 9421,
+        "name": "Curso 38 - A Arte de Conectar: Produtos e Soluções Ópticas e LAN para Alta Performance - Local: Auditório da FIPP (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 50,
+        "vacanciesLeft": 50
+      },
+      {
+        "id": 9444,
+        "name": "Curso 41 - Tech Talk: A Comunicação como Código Universal - Local: Sala H12 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 50,
+        "vacanciesLeft": 41
+      },
+      {
+        "id": 9526,
+        "name": "Curso 43 - Iniciando no mundo dos Jogos com Construct 3! - Local: Lab 003 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 20,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9346,
+        "name": "Curso 08 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 3 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9353,
+        "name": "Curso 15 - Fundamentos do desenho tradicional e digital: Parte 2 - Local: Laboratório de Criação 2 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 25,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9347,
+        "name": "Curso 09 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 3 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 17
+      },
+      {
+        "id": 9339,
+        "name": "Curso 01 - Acessibilidade Digital (a11y): Parte 2 - Local: Laboratório de Criação 2 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 23
+      },
+      {
+        "id": 9340,
+        "name": "Curso 02 - Segurança de Aplicações Web e APIs - Fundamentos, Ferramentas e Simulação de Ataque: Parte 2 - Local: LAB 004 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 40,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9342,
+        "name": "Curso 04 - Java e Estruturas de Dados para entrevistas em Big Techs: Parte 2 - Local: LAB 103 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9343,
+        "name": "Curso 05 - Here we GO again - Introdução a scripts com golang: Parte 2 - Local: LAB 002 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 25,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9344,
+        "name": "Curso 06 - DevOps e Docker: Parte 2 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9345,
+        "name": "Curso 07 - Primeiros passos com o aprendizado de máquina: Conceitos e Técnicas Clássicas: Parte 2 - Local: Laboratório de Criação 1 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 25,
+        "vacanciesLeft": 1
+      },
+      {
+        "id": 9348,
+        "name": "Curso 10 - Cibersegurança e Hacking Ético: Parte 2 - Local: LAB 106 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9349,
+        "name": "Curso 11 - Desenvolvimento de Agente de IA para Negócios: Parte 2 - Local: LAB 001 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 20,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9350,
+        "name": "Curso 12 - Construindo Bots com IA no WhatsApp: Node.js + ChatGPT: Parte 2 - Local: LAB 104 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 25,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9352,
+        "name": "Curso 14 - DotNET com Entity Framework Core: Construindo Aplicações Multi-Tenant do Zero: Parte 2 - Local: LAB 006 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 35,
+        "vacanciesLeft": 30
+      },
+      {
+        "id": 9371,
+        "name": "Curso 33 - Construindo e entregando APIs escaláveis em ASP.NET Core com arquitetura moderna e pipelines de CI/CD na Cloud Azure: Parte 2 - Local: LAB 107 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 50,
+        "vacanciesLeft": 36
+      },
+      {
+        "id": 9372,
+        "name": "Curso 34- GLOBAL CAREER OPPORTUNITIES - Construindo uma carreira internacional; desbloqueie seu potencial para uma carreira em TI de sucesso! - Local: Auditório da FIPP (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 50,
+        "vacanciesLeft": 32
+      },
+      {
+        "id": 9445,
+        "name": "Curso 42 - Tech Talk: A Comunicação como Código Universal - Local: Sala H12 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 50,
+        "vacanciesLeft": 49
+      },
+      {
+        "id": 9346,
+        "name": "Curso 08 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 4 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9356,
+        "name": "Curso 18 - DotNET com Entity Framework Core: Construindo Aplicações Multi-Tenant do Zero: Parte 1 - Local: LAB 108 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 23
+      },
+      {
+        "id": 9357,
+        "name": "Curso 19 - Automação de testes com Robot Framework.: Parte 1 - Local: LAB 106 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9424,
+        "name": "Curso 40 - Conexões que Transformam: o Poder das Soft Skills no Desenvolvimento Pessoal e Profissional - Local: Sala H12 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 24
+      },
+      {
+        "id": 9347,
+        "name": "Curso 09 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 4 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 17
+      },
+      {
+        "id": 9354,
+        "name": "Curso 16 - Cibersegurança e Hacking Ético: Parte 2 - Local: LAB 106 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9356,
+        "name": "Curso 18 - DotNET com Entity Framework Core: Construindo Aplicações Multi-Tenant do Zero: Parte 2 - Local: LAB 108 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 23
+      },
+      {
+        "id": 9373,
+        "name": "Curso 35 - Git e GitHub: Do Básico ao Pull Request: Parte 2 - Local: Laboratório de Criação 2 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9552,
+        "name": "Curso 46 - Desenvolvendo API de busca com Elasticsearch e Serviço de Mensageria: Parte 2 - Local: Lab 101 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 11
+      },
+      {
+        "id": 9346,
+        "name": "Curso 08 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 5 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9357,
+        "name": "Curso 19 - Automação de testes com Robot Framework.: Parte 2 - Local: LAB 106 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9347,
+        "name": "Curso 09 - Fundamentos de Inteligência Artificial Generativa - Google Cloud: Parte 5 - Local: LAB 109 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 17
+      }
+    ]
+  },
+  {
+    "title": "37º Ciclo de Palestras",
+    "courses": [
+      {
+        "id": 9530,
+        "name": "Palestra 01 (Abertura) - Objetivos e Propósitos: 7 milhões de anos em 7 livros - Local: Salão do Limoeiro - Campus 2 (Alunos dos cursos EAD podem comparecer presencialmente)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:00:00",
+        "startTime": "19:00:00",
+        "endTime": "22:00:00",
+        "vacancies": 800,
+        "vacanciesLeft": 342
+      },
+      {
+        "id": 9549,
+        "name": "Palestra 02 - Cibersegurança na Prática, Técnicas de Invasão e Investigações Cibernéticas. - Local: Sala H12 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 100,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9551,
+        "name": "Palestra 03 - Competências humanas que a IA não substitui. - Local: Sala H22 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 100,
+        "vacanciesLeft": 0
+      }
+    ]
+  },
+  {
+    "title": "3° DevFest Presidente Prudente (GOOGLE DEVELOPER GROUPS)",
+    "courses": [
+      {
+        "id": 9358,
+        "name": "Curso 20 - Ciência de Dados na prática: construindo sistemas de recomendação com Python: Parte 1 - Local: LAB 105 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 35,
+        "vacanciesLeft": 3
+      },
+      {
+        "id": 9370,
+        "name": "Curso 32 - Como criar um agente de IA que substitui um ser humano - N8N, ChatGPT e Whatsapp. - Local: LAB 106 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9358,
+        "name": "Curso 20 - Ciência de Dados na prática: construindo sistemas de recomendação com Python: Parte 2 - Local: LAB 105 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "08:00:00 às 12:00:00",
+        "startTime": "08:00:00",
+        "endTime": "12:00:00",
+        "vacancies": 35,
+        "vacanciesLeft": 3
+      },
+      {
+        "id": 9365,
+        "name": "Curso 27 - Autópsia de IA: Hackeando e Debugando as Decisões com XAI - Local: LAB 105 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 35,
+        "vacanciesLeft": 14
+      },
+      {
+        "id": 9351,
+        "name": "Curso 13 - Do Monolito ao Microsserviço: Fundamentos, práticas e desafios: Parte 1 - Local: Lab Redes (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 40,
+        "vacanciesLeft": 31
+      },
+      {
+        "id": 9359,
+        "name": "Curso 21 - Descobrindo Flutter e Dart: O Futuro do Mobile - Local: Sala H29C (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 50,
+        "vacanciesLeft": 34
+      },
+      {
+        "id": 9361,
+        "name": "Curso 23 - Ux & Ui Design com IA para Front End: Parte 1 - Local: LAB 102 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 20,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9362,
+        "name": "Curso 24 - IA 360: potencializando produtos, projetos e processos: Parte 1 - Local: LAB 105 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 35,
+        "vacanciesLeft": 30
+      },
+      {
+        "id": 9364,
+        "name": "Curso 26 - API Hero: Do Zero ao Deploy com Spring Boot e GraphQL: Parte 1 - Local: LAB 101 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9366,
+        "name": "Curso 28 - LibreBot - Robótica Open Source - Local: Sala H21 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 50,
+        "vacanciesLeft": 36
+      },
+      {
+        "id": 9368,
+        "name": "Curso 30 - Bootcamp Prático: Construa do Back ao Front com Spring e React: Parte 1 - Local: LAB 108 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 8
+      },
+      {
+        "id": 9351,
+        "name": "Curso 13 - Do Monolito ao Microsserviço: Fundamentos, práticas e desafios: Parte 2 - Local: Lab Redes (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 40,
+        "vacanciesLeft": 31
+      },
+      {
+        "id": 9360,
+        "name": "Curso 22 - Introdução ao Arduino e Eletrônica Básica - Local: LAB 005 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 7
+      },
+      {
+        "id": 9361,
+        "name": "Curso 23 - Ux & Ui Design com IA para Front End: Parte 2 - Local: LAB 102 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 20,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9362,
+        "name": "Curso 24 - IA 360: potencializando produtos, projetos e processos: Parte 2 - Local: LAB 105 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 35,
+        "vacanciesLeft": 30
+      },
+      {
+        "id": 9363,
+        "name": "Curso 25 - Como criar um agente de IA que substitui um ser humano - N8N, ChatGPT e Whatsapp. - Local: LAB 003 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 20,
+        "vacanciesLeft": 0
+      },
+      {
+        "id": 9364,
+        "name": "Curso 26 - API Hero: Do Zero ao Deploy com Spring Boot e GraphQL: Parte 2 - Local: LAB 101 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 9
+      },
+      {
+        "id": 9368,
+        "name": "Curso 30 - Bootcamp Prático: Construa do Back ao Front com Spring e React: Parte 2 - Local: LAB 108 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:30:00",
+        "startTime": "19:00:00",
+        "endTime": "22:30:00",
+        "vacancies": 30,
+        "vacanciesLeft": 8
+      },
+      {
+        "id": 9565,
+        "name": "Palestra 05 - Desmistificando a Carreira em Dados & IA - Local: Teatro César Cava (Alunos dos cursos EAD podem comparecer presencialmente)",
+        "date": "27/10/2025",
+        "periodTime": "19:00:00 às 22:00:00",
+        "startTime": "19:00:00",
+        "endTime": "22:00:00",
+        "vacancies": 450,
+        "vacanciesLeft": 358
+      },
+      {
+        "id": 9367,
+        "name": "Curso 29 - O Incrível mundo mágico da web - Local: LAB 105 (Presencial)",
+        "date": "27/10/2025",
+        "periodTime": "13:30:00 às 17:30:00",
+        "startTime": "13:30:00",
+        "endTime": "17:30:00",
+        "vacancies": 40,
+        "vacanciesLeft": 13
+      }
+    ]
+  }
+]
