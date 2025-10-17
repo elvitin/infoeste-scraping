@@ -1,18 +1,28 @@
 import type { Table } from '@tanstack/react-table';
-import { X } from 'lucide-react';
+import { X, RefreshCw } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { DataTableFacetedFilter } from './data-table-faceted-filter';
+import { DataTableViewOptions } from './data-table-view-options';
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
   eventTitles: { label: string; value: string }[];
   dates: { label: string; value: string }[];
   periods: { label: string; value: string }[];
+  onRefresh?: () => void;
+  isRefreshing?: boolean;
 }
 
-export function DataTableToolbar<TData>({ table, eventTitles, dates, periods }: DataTableToolbarProps<TData>) {
+export function DataTableToolbar<TData>({
+  table,
+  eventTitles,
+  dates,
+  periods,
+  onRefresh,
+  isRefreshing
+}: DataTableToolbarProps<TData>) {
   const isFiltered = table.getState().columnFilters.length > 0;
 
   return (
@@ -39,6 +49,13 @@ export function DataTableToolbar<TData>({ table, eventTitles, dates, periods }: 
             <X />
           </Button>
         )}
+      </div>
+      <div className="flex items-center gap-2">
+        <DataTableViewOptions table={table} />
+        <Button size="sm" onClick={onRefresh} disabled={isRefreshing} className="h-8">
+          <RefreshCw className={isRefreshing ? 'animate-spin' : ''} />
+          Atualizar
+        </Button>
       </div>
     </div>
   );

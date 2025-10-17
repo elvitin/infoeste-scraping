@@ -22,6 +22,8 @@ interface DataTableProps<TData, TValue> {
   eventTitles: { label: string; value: string }[];
   dates: { label: string; value: string }[];
   periods: { label: string; value: string }[];
+  onRefresh?: () => void;
+  isRefreshing?: boolean;
 }
 
 export function DataTable<TData, TValue>({
@@ -29,7 +31,9 @@ export function DataTable<TData, TValue>({
   data,
   eventTitles,
   dates,
-  periods
+  periods,
+  onRefresh,
+  isRefreshing
 }: DataTableProps<TData, TValue>) {
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
@@ -65,7 +69,14 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="flex flex-col gap-4">
-      <DataTableToolbar table={table} eventTitles={eventTitles} dates={dates} periods={periods} />
+      <DataTableToolbar
+        table={table}
+        eventTitles={eventTitles}
+        dates={dates}
+        periods={periods}
+        onRefresh={onRefresh}
+        isRefreshing={isRefreshing}
+      />
       <div className="overflow-hidden rounded-md border">
         <Table>
           <TableHeader>

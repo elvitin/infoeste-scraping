@@ -24,9 +24,30 @@ function App() {
   const [events, setEvents] = React.useState<InfoesteEvent[]>([]);
   const [isLoading, setIsLoading] = React.useState<boolean>(true);
   const [error, setError] = React.useState<string | null>(null);
-
+  const [isRefreshing, setIsRefreshing] = React.useState<boolean>(false);
 
   //const [isServiceHealthy, setIsServiceHealthy] = React.useState<boolean>(true);
+
+  const fetchEvents = React.useCallback(async (signal?: AbortSignal) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/events`, { signal });
+      if (!response.ok) {
+        throw new Error(`Falha ao carregar eventos (status: ${response.status})`);
+      }
+      const apiResponse = (await response.json()) as ApiResponse;
+      console.info({ apiResponse });
+      if (!apiResponse.success || !apiResponse.data) {
+        throw new Error(apiResponse.message ?? 'Erro ao carregar eventos');
+      }
+      setEvents(apiResponse.data);
+      setError(null);
+    } catch (err) {
+      if ((err as Error).name === 'AbortError') {
+        return;
+      }
+      setError((err as Error).message);
+    }
+  }, []);
 
   React.useEffect(() => {
     const controller = new AbortController();
@@ -52,16 +73,7 @@ function App() {
           throw new Error('O serviço de cursos está temporariamente indisponível');
         }
         */
-        const response = await fetch(`${API_BASE_URL}/events`, { signal: controller.signal });
-        if (!response.ok) {
-          throw new Error(`Falha ao carregar eventos (status: ${response.status})`);
-        }
-        const apiResponse = (await response.json()) as ApiResponse;
-        console.info({ apiResponse });
-        if (!apiResponse.success || !apiResponse.data) {
-          throw new Error(apiResponse.message ?? 'Erro ao carregar eventos');
-        }
-        setEvents(apiResponse.data);
+        await fetchEvents(controller.signal);
       } catch (err) {
         if ((err as Error).name === 'AbortError') {
           return;
@@ -73,7 +85,16 @@ function App() {
     })();
 
     return () => controller.abort();
-  }, []);
+  }, [fetchEvents]);
+
+  const handleRefresh = React.useCallback(async () => {
+    setIsRefreshing(true);
+    try {
+      await fetchEvents();
+    } finally {
+      setIsRefreshing(false);
+    }
+  }, [fetchEvents]);
 
   if (isLoading) {
     return (
@@ -110,7 +131,7 @@ function App() {
           <p className="text-muted-foreground">Eventos, cursos e palestras disponíveis para inscrição</p>
         </div>
       </div>
-      <EventsTable events={events} />
+      <EventsTable events={events} onRefresh={handleRefresh} isRefreshing={isRefreshing} />
     </div>
   );
 }

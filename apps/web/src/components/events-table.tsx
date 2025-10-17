@@ -5,6 +5,8 @@ import { eventsColumns } from './events-columns';
 
 interface EventsTableProps {
   events: InfoesteEvent[];
+  onRefresh?: () => void;
+  isRefreshing?: boolean;
 }
 
 export interface FilterOption {
@@ -13,7 +15,7 @@ export interface FilterOption {
   icon?: React.ComponentType<{ className?: string }>;
 }
 
-export function EventsTable({ events }: EventsTableProps) {
+export function EventsTable({ events, onRefresh, isRefreshing }: EventsTableProps) {
   // Flatten the events structure to create a flat array of courses with event title
   const flattenedCourses = React.useMemo(() => {
     return events.flatMap(event =>
@@ -60,6 +62,8 @@ export function EventsTable({ events }: EventsTableProps) {
       eventTitles={eventTitles}
       dates={dates}
       periods={periods}
+      onRefresh={onRefresh}
+      isRefreshing={isRefreshing}
     />
   );
 }

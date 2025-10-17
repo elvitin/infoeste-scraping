@@ -10,7 +10,6 @@ const targets = ['apps/web/dist', 'packages/core/dist', 'packages/backend/dist']
 const artifactRoots = ['packages/core/src', 'packages/backend/src'];
 const generatedSuffixes = ['.js', '.js.map', '.d.ts'];
 
-
 async function traverseAndCleanup(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   await Promise.all(
