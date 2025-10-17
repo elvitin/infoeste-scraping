@@ -4,7 +4,7 @@ import type { PuppeteerManager } from '../puppeteer/puppeteer-manager';
 
 export class PuppeteerCourseRepository implements ICourseRepository {
   private readonly URL = 'https://www.unoeste.br/semanas/2025/37infoeste/CursosPalestras';
-  constructor(private puppeteerManager: PuppeteerManager) {}
+  constructor(private puppeteerManager: PuppeteerManager) { }
 
   async getGroupedEvents(): Promise<InfoesteEvent[]> {
     const page = await this.puppeteerManager.navigateTo(this.URL);
@@ -39,21 +39,24 @@ export class PuppeteerCourseRepository implements ICourseRepository {
         const titleElement = eventElement.querySelector('.tituloDoTipo');
         const title = titleElement ? (titleElement.textContent?.trim() ?? '') : '';
 
-        const courseRows = eventElement.querySelectorAll('table tbody tr:not(:first-child)');
+        const allRows = eventElement.querySelectorAll('table tbody tr');
 
         let currentDate = '';
         const dateRegex = /(\d{2}\/\d{2}\/\d{4})/;
-        const dateHeader = eventElement.querySelector('table tbody tr:first-child th:first-child');
-        if (dateHeader) {
-          const dateMatch = dateHeader.textContent?.match(dateRegex);
-          if (!dateMatch) {
-            throw new Error('Data não encontrada');
-          }
-          currentDate = dateMatch[0];
-        }
 
         const courses: Event[] = [];
-        courseRows.forEach(row => {
+        allRows.forEach(row => {
+          // Verifica se a linha é um header de data (contém <th>)
+          const headerCell = row.querySelector('th:first-child');
+          if (headerCell) {
+            const dateMatch = headerCell.textContent?.match(dateRegex);
+            if (dateMatch) {
+              currentDate = dateMatch[0];
+            }
+            return; // Pula para a próxima linha (não é um curso)
+          }
+
+          // Processa linha de curso (contém <td>)
           const columns = row.querySelectorAll('td');
           if (columns.length >= 4) {
             const courseNameElement = columns[0].querySelector('a');
