@@ -2,22 +2,66 @@ import * as React from 'react';
 import type { InfoesteEvent } from '@infoeste/core';
 import { EventsTable } from '@/components/events-table';
 
+interface ApiResponse {
+  success: boolean;
+  data?: InfoesteEvent[];
+  error?: string;
+  message?: string;
+}
+/*
+interface HealthResponse {
+  success: boolean;
+  status: string;
+  schemaValidation?: {
+    isValid: boolean;
+    errors: string[];
+  };
+}
+*/
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+
 function App() {
   const [events, setEvents] = React.useState<InfoesteEvent[]>([]);
   const [isLoading, setIsLoading] = React.useState<boolean>(true);
   const [error, setError] = React.useState<string | null>(null);
 
+
+  //const [isServiceHealthy, setIsServiceHealthy] = React.useState<boolean>(true);
+
   React.useEffect(() => {
     const controller = new AbortController();
-
-    const loadEvents = async () => {
+    /*
+    const checkHealth = async () => {
       try {
-        const response = await fetch('/events.json', { signal: controller.signal });
+        const response = await fetch(`${API_BASE_URL}/health`, { signal: controller.signal });
+        const data = (await response.json()) as HealthResponse;
+        setIsServiceHealthy(data.success && data.status === 'healthy');
+        return data.success;
+      } catch {
+        setIsServiceHealthy(false);
+        return false;
+      }
+    };
+    */
+    (async () => {
+      try {
+        /*
+        // Verificar saúde do serviço primeiro
+        const isHealthy = await checkHealth();
+        if (!isHealthy) {
+          throw new Error('O serviço de cursos está temporariamente indisponível');
+        }
+        */
+        const response = await fetch(`${API_BASE_URL}/events`, { signal: controller.signal });
         if (!response.ok) {
           throw new Error(`Falha ao carregar eventos (status: ${response.status})`);
         }
-        const data = (await response.json()) as InfoesteEvent[];
-        setEvents(data);
+        const apiResponse = (await response.json()) as ApiResponse;
+        console.info({ apiResponse });
+        if (!apiResponse.success || !apiResponse.data) {
+          throw new Error(apiResponse.message ?? 'Erro ao carregar eventos');
+        }
+        setEvents(apiResponse.data);
       } catch (err) {
         if ((err as Error).name === 'AbortError') {
           return;
@@ -26,9 +70,7 @@ function App() {
       } finally {
         setIsLoading(false);
       }
-    };
-
-    void loadEvents();
+    })();
 
     return () => controller.abort();
   }, []);
@@ -40,7 +82,18 @@ function App() {
       </div>
     );
   }
-
+  /*
+  if (!isServiceHealthy) {
+    return (
+      <div className="flex h-screen items-center justify-center">
+        <div className="text-center">
+          <div className="text-lg text-yellow-600 mb-2">⚠️ Serviço Temporariamente Indisponível</div>
+          <p className="text-muted-foreground">O sistema de cursos está fora do ar ou em manutenção.</p>
+        </div>
+      </div>
+    );
+  }
+  */
   if (error) {
     return (
       <div className="flex h-screen items-center justify-center">

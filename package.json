@@ -7,9 +7,10 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "npm run dev --workspace @infoeste/scraper",
-    "dev": "npm run dev --workspace @infoeste/scraper",
-    "build": "npm run build --workspace @infoeste/core && npm run build --workspace @infoeste/infrastructure && npm run build --workspace @infoeste/web && npm run build --workspace @infoeste/scraper",
+    "start": "npm run dev --workspace @infoeste/backend",
+    "dev": "npm run dev --workspace @infoeste/backend",
+    "dev:web": "npm run dev --workspace @infoeste/web",
+    "build": "npm run build --workspace @infoeste/core && npm run build --workspace @infoeste/backend && npm run build --workspace @infoeste/web",
     "lint": "biome check .",
     "fmt:fix": "npx @biomejs/biome format --write .",
     "clean": "node ./scripts/clean.mjs",
@@ -20,5 +21,8 @@
     "@types/node": "^24.8.0",
     "knip": "^5.65.0",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "znv": "^0.5.0"
   }
 }

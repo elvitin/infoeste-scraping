@@ -1,13 +1,21 @@
 # Infoeste Scraping
 
-Projeto em monorepo (npm workspaces) que coleta os eventos da INFOESTE com Puppeteer, salva os dados como JSON e disponibiliza uma visualização web construída com Vite + React + shadcn/ui.
+Projeto em monorepo (npm workspaces) que disponibiliza uma API REST para scraping de eventos da INFOESTE com Puppeteer e uma interface web moderna para visualização dos dados.
 
-## Requisitos
+## 🚀 Arquitetura
+
+O projeto foi reestruturado para uma arquitetura **cliente-servidor**:
+
+- **Backend API** (`@infoeste/backend`): Servidor Fastify com Puppeteer persistente, cache inteligente e validação de schema HTML
+- **Frontend Web** (`@infoeste/web`): Interface React + Vite + shadcn/ui que consome a API
+- **Core** (`@infoeste/core`): Tipos e interfaces compartilhados entre backend e frontend
+
+## 📋 Requisitos
 
 - Node.js v22.18.0 ou superior (recomendado usar a mesma versão via `nvm` ou `fnm`)
 - Acesso à internet para que o Puppeteer baixe o Chromium na primeira execução
 
-## Instalação
+## 🔧 Instalação
 
 ```bash
 npm install
@@ -15,50 +23,163 @@ npm install
 
 Esse comando prepara todas as workspaces definidas em `package.json` (`apps/*` e `packages/*`).
 
-## Comandos principais
+## ⚙️ Configuração
 
-- `npm start`: executa o fluxo completo do scraper (`apps/scraper`)
-	1. Abre o site oficial da INFOESTE com Puppeteer e extrai a programação.
-	2. Salva os dados em `apps/web/public/events.json`.
-	3. Gera o build do frontend (`apps/web`).
-	4. Sobe o `vite preview` em `http://127.0.0.1:4173` e abre o navegador controlado pelo Puppeteer.
-- `npm run build`: gera os artefatos de produção para `@infoeste/core`, `@infoeste/infrastructure`, `@infoeste/web` e `@infoeste/scraper`.
-- `npm run lint`: roda o Biome para verificação estática do código.
-- `npm run clean`: apaga todos os artefatos gerados (`dist/*` e arquivos `.js/.d.ts/.js.map` dentro de `src`) além do arquivo `apps/web/public/events.json`.
+### Backend
 
-## Execução passo a passo
+Crie o arquivo `packages/backend/.env`:
 
-1. **Instale as dependências**: `npm install`.
-2. **Execute o scraper**: `npm start`.
-	 - Em ambientes Windows o Puppeteer lança o navegador Chromium automaticamente; caso use outro SO, certifique-se de permitir a abertura de janelas.
-	 - Se a página oficial não estiver disponível, o comando exibirá um erro de timeout.
-3. **Visualize os dados**: ao final do fluxo o Vite Preview permanecerá rodando em `http://127.0.0.1:4173` até que você feche a janela do Chromium ou interrompa o processo no terminal.
+```bash
+PORT=3000
+CACHE_TTL_SECONDS=300
+NODE_ENV=development
+```
 
-## Execução manual dos pacotes (opcional)
+### Frontend
 
-- Rodar apenas o scraper (modo dev, sem abrir preview):
-	```bash
-	npm run dev --workspace @infoeste/scraper
-	```
-- Rodar o frontend em modo desenvolvimento (hot reload):
-	```bash
-	npm run dev --workspace @infoeste/web
-	```
-- Gerar build do frontend manualmente:
-	```bash
-	npm run build --workspace @infoeste/web
-	```
+Crie o arquivo `apps/web/.env`:
 
-## Estrutura do monorepo
+```bash
+VITE_API_URL=http://localhost:3000
+```
 
-- `packages/core`: entidades e contratos compartilhados.
-- `packages/infrastructure`: implementação Puppeteer do repositório de cursos.
-- `apps/scraper`: CLI que orquestra scraping, geração do JSON e preview automático.
-- `apps/web`: aplicação Vite/React responsável por renderizar a tabela de eventos.
+## 🎮 Comandos Principais
 
-## Dicas de troubleshooting
+### Desenvolvimento
 
-- **Erro `net::ERR_CONNECTION_TIMED_OUT`**: verifique sua conexão e se o site da INFOESTE está acessível. O scraper depende dessa página.
-- **Erro ao iniciar scripts npm (Windows)**: assegure-se de usar o terminal `cmd.exe` ou PowerShell e de não bloquear a execução de executáveis baixados (Chromium/Puppeteer).
-- **Porta 4173 ocupada**: ajuste a porta no arquivo `apps/scraper/src/ui/console.ts` (constante `PREVIEW_PORT`).
-- **Limpeza completa**: `npm run clean` remove build artifacts, arquivos `.js/.d.ts/.js.map` deixados nos diretórios `src` e o JSON gerado pelo scraper. Para um reset total (incluindo `node_modules`), exclua manualmente a pasta e rode `npm install` novamente.
+```bash
+# Iniciar o backend (recomendado executar primeiro)
+npm run dev
+
+# Iniciar o frontend (em outro terminal)
+npm run dev:web
+```
+
+### Produção
+
+```bash
+# Build de todos os pacotes
+npm run build
+
+# Iniciar backend em produção
+npm start --workspace @infoeste/backend
+```
+
+### Outros comandos
+
+- `npm run lint`: Verifica o código com Biome
+- `npm run fmt:fix`: Formata o código automaticamente
+- `npm run clean`: Remove artefatos de build
+
+## 📡 API Endpoints
+
+### `GET /events`
+
+Retorna a lista de eventos com cache inteligente.
+
+**Resposta:**
+```json
+{
+  "success": true,
+  "data": [...],
+  "cachedAt": "2025-10-16T10:30:00.000Z"
+}
+```
+
+### `GET /health`
+
+Health check com validação da estrutura HTML da página.
+
+**Resposta (healthy):**
+```json
+{
+  "success": true,
+  "status": "healthy",
+  "schemaValidation": {
+    "isValid": true,
+    "errors": []
+  },
+  "timestamp": "2025-10-16T10:30:00.000Z"
+}
+```
+
+## 🏗️ Estrutura do Monorepo
+
+```
+infoeste-scraping/
+├── packages/
+│   ├── core/           # Tipos e interfaces compartilhados
+│   └── backend/        # API REST com Fastify + Puppeteer
+└── apps/
+    └── web/            # Frontend React + Vite
+```
+
+### Detalhes dos Pacotes
+
+- **`@infoeste/core`**: Entidades (`Event`, `InfoesteEvent`) e contratos (`ICourseRepository`)
+- **`@infoeste/backend`**: 
+  - Servidor Fastify com CORS
+  - Puppeteer persistente (headless, sempre aberto)
+  - Cache em memória com TTL configurável
+  - Validação estrutural do HTML
+  - Rotas `/events` e `/health`
+- **`@infoeste/web`**: 
+  - Interface React com TanStack Table
+  - Componentes shadcn/ui
+  - Health check automático
+  - Mensagens de erro amigáveis
+
+## 🎯 Funcionalidades Principais
+
+### Backend
+
+✅ **Puppeteer Persistente**: Browser mantido aberto em segundo plano  
+✅ **Cache Inteligente**: TTL configurável (padrão: 5 minutos)  
+✅ **Health Check**: Valida se a estrutura HTML da página mudou  
+✅ **Gestão de Timeout**: Retorna erro se a página não carregar  
+✅ **Validação com Zod**: Variáveis de ambiente validadas  
+✅ **Graceful Shutdown**: Encerramento limpo do browser  
+
+### Frontend
+
+✅ **Consulta de API**: Busca dados do backend  
+✅ **Health Check Automático**: Detecta se o serviço está indisponível  
+✅ **Tabelas Interativas**: Filtros, ordenação e paginação  
+✅ **UI Moderna**: Componentes shadcn/ui com Tailwind CSS  
+✅ **Feedback Visual**: Estados de loading e erro  
+
+## 🐛 Troubleshooting
+
+### Backend
+
+- **Erro de timeout**: Verifique se `https://www.unoeste.br/semanas/2025/37infoeste/CursosPalestras` está acessível
+- **Porta ocupada**: Altere `PORT` no `.env`
+- **Puppeteer não inicia**: Verifique permissões e se o Chromium foi baixado corretamente
+
+### Frontend
+
+- **CORS error**: Certifique-se que o backend está rodando
+- **API não responde**: Verifique `VITE_API_URL` no `.env`
+- **"Serviço indisponível"**: O health check detectou mudança na estrutura HTML ou timeout
+
+## 📦 Sistema de Cache
+
+O backend implementa cache em memória com as seguintes características:
+
+- Armazena eventos com timestamp de expiração
+- TTL configurável via `CACHE_TTL_SECONDS`
+- Invalidação automática após expiração
+- Primeira requisição: scraping da página
+- Requisições subsequentes: retorno instantâneo do cache
+
+## 🔍 Validação de Schema HTML
+
+O sistema valida automaticamente:
+
+- Presença de `#listaHorarios`
+- Estrutura `li > .tituloDoTipo + table > tbody > tr`
+- Mínimo de 4 colunas nas tabelas
+- Links válidos na primeira coluna
+- Quantidade adequada de eventos
+
+Se a estrutura mudar, o frontend exibe mensagem de "serviço indisponível".

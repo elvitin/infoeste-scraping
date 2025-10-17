@@ -10,10 +10,7 @@
       "path": "packages/core"
     },
     {
-      "path": "apps/scraper"
-    },
-    {
-      "path": "packages/infrastructure"
+      "path": "packages/backend"
     }
   ],
   "settings": {
