@@ -26,7 +26,6 @@ export function EventsTable({ events, onRefresh, isRefreshing }: EventsTableProp
     );
   }, [events]);
 
-  // Extract unique event titles for filter
   const eventTitles = React.useMemo(() => {
     const uniqueTitles = Array.from(new Set(events.map(e => e.title)));
     return uniqueTitles.map(title => ({
@@ -35,7 +34,6 @@ export function EventsTable({ events, onRefresh, isRefreshing }: EventsTableProp
     }));
   }, [events]);
 
-  // Extract unique dates for filter
   const dates = React.useMemo(() => {
     const uniqueDates = Array.from(new Set(events.flatMap(event => event.courses.map(course => course.date)))).sort();
     return uniqueDates.map(date => ({
@@ -44,7 +42,6 @@ export function EventsTable({ events, onRefresh, isRefreshing }: EventsTableProp
     }));
   }, [events]);
 
-  // Extract unique periods for filter
   const periods = React.useMemo(() => {
     const uniquePeriods = Array.from(
       new Set(events.flatMap(event => event.courses.map(course => course.periodTime)))
